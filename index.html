@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="header">
+    <CENTER ><h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;">CONTROLE DE MÁQUINAS</h1></CENTER>
+    <div class="header-right">
+    </div>
+  </div>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London') ">C - 1</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">C - 2 </button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">C - 3</button>
+ 
+  </div>
+  <center><ul class="grade" style="margin: 10px;">           
+    <li> <a href="#" title="Html" id="a1">C-1</a> </li>
+    <li> <a href="#" title="Css" id="a2">C-2</a> </li>
+    <li> <a href="#" title="jQuery" id="a3">C-3</a> </li>  
+
+
+  </ul>
+</center>
+  
+  <div id="London" class="tabcontent">
+    <h3>LIGADO</h3>
+    <p>VOL.4 - POTENCIA 75Whz</p>
+    <button class="button">DESLIGAR</button>
+  </div>
+  
+  <div id="Paris" class="tabcontent">
+    <h3>LIGADO</h3>
+    <p>VOL.3 - POTENCIA 50Whz</p> 
+    <button class="button">DESLIGAR</button>
+  </div>
+  
+  <div id="Tokyo" class="tabcontent">
+    <h3>DESLIGADO</h3>
+    <p>VOL.0 - 15Hwz</p>
+    <button class="button button1">LIGAR</button>
+  </div>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="https://planner5d.com/pt/v?key=1c506b696572f22556a2362e1c304185&viewMode=3d" target="_blank">Corredores-Visão</a>
+    <a href="https://sketchfab.com/3d-models/ar-condicionado-liberoe-lg-q122hsg3-dbd285a4215b4f849ae8df83f9447e66" target="_blank">Tempo-Real-A</a>
+    <a href="https://sketchfab.com/3d-models/ar-condicionado-62923254d4d54bd09db69ca12eff8dd4" target="_blank">Tempo-Real-B</a>
+    <a href="https://sketchfab.com/3d-models/ar-condicionado-artcool-lg-q182crg2-1f99ba11db4e4503b5f96b11e83493ac" target="_blank">Tempo-Real-C</a>
+    <a href="https://visao.com.br/ao-vivo/21/praca-dante-alighieri-sinimbu-caxias-do-sul-rs" target="_blank">Câmera Externa</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ SUPER-VISÃO</button>  
+    <h2</h2>
+    <p></p>
+  </div>
+
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+  </body>
+  </html> 
+</body>
+</html>
